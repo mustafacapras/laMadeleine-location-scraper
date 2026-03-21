@@ -8,7 +8,7 @@ from lamadeleine_scraper import fetch_all_locations, save, log
 from parser import build_dataframe
 from associate import associate
 
-DEFAULT_REVIEWS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "", "googleReview.csv")
+DEFAULT_REVIEWS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "googleReview.csv")
 
 
 def main() -> None:

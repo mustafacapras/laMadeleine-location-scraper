@@ -1,6 +1,6 @@
 # la Madeleine Location Scraper
 
-Bain & Company — WDF Specialist Technical Assessment
+Bain & Company — Technical Assessment
 
 ---
 
@@ -18,6 +18,8 @@ The rest of the pipeline joins that location data with a provided Google Reviews
 ├── .github/
 │   └── workflows/
 │       └── scrape.yaml             # Quarterly automation
+├── assets/
+│   └── slide_preview.png           # Assessment slide preview
 ├── scraper/
 │   ├── constants.py                # API endpoint, headers, output columns, state name map
 │   ├── parser.py                   # Parses raw API records into clean rows
@@ -75,7 +77,9 @@ python scraper/associate.py --reviews googleReview.csv
 npm install pptxgenjs papaparse
 node create_slide.js
 ```
-Reads `data/reviews_with_locations.csv`, computes all statistics, and writes `lamadeleine_assessment.pptx`. No hardcoded values — the slide updates automatically when the underlying data changes.
+Reads `data/reviews_with_locations.csv`, computes all statistics, and writes `lamadeleine_assessment.pptx`.
+
+State-level ratings use store-level aggregation — each location's average is computed first, then averaged across stores per state. This avoids high-volume locations skewing state-level results.
 
 ---
 

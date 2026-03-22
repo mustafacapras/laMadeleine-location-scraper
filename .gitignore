@@ -14,3 +14,14 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Node
+node_modules/
+
+# JSON files
+package.json
+package-lock.json
+
+# pptx file
+lamadeleine_assessment.pptx
+~$*
